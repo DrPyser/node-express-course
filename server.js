@@ -11,7 +11,18 @@ app.get('/users', (req, res) => res.json({
   message: 'successfully got users. Nice!',
   users: mockUsers
 }))
+app.get('/users/:id', (req, res) => {
+  console.log(`req.params.id: ${req.params.id}`)
+  res.json({
+    success: true,
+    message: `successfully got one user with id ${req.params.id}. Nice!`,
+    user: {
+      id: req.params.id
+    }
+  })
+})
 
-app.listen(8000, () => {
-  console.log('server is running!')
+const port = 8000
+app.listen(port, () => {
+  console.log(`server is running on port ${port}!`)
 })

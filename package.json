@@ -6,7 +6,8 @@
   "scripts": {
     "test": "eslint --debug './*.js'",
     "fix": "eslint --debug --fix './*.js'",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start-watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "eslint": "^8.19.0",
-    "eslint-config-standard": "^17.0.0"
+    "eslint-config-standard": "^17.0.0",
+    "nodemon": "^2.0.19"
   }
 }
